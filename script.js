@@ -97,6 +97,19 @@ for (let i = 0; i < shoppingList.length; i++) {
 //   listItemElement.textContent = shoppingList[i];
 // }
 
+// Create TABLE
+let table = document.createElement('table');
+exercisesElement.prepend(table);
+// Create LI
+for (let i = 0; i < shoppingList.length; i++) {
+    let tr = document.createElement('tr');
+    table.append(tr);
+    let td = document.createElement('td');
+    tr.append(td);
+    td.style.border = "1px solid black";
+    td.textContent = shoppingList[i];
+}
+
 
 // HOW TO COPY?
 let button2 = buttonElement.cloneNode();
@@ -142,4 +155,10 @@ exercisesElement.prepend(list2);
 // };
 
 let colorful = document.createElement('div');
-colorful
+colorful.textContent = "HELLO";
+colorful.style.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
+document.body.prepend(colorful);
+// 0-255 - Math.random() * 255
+
+
+
